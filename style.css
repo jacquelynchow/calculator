@@ -1,9 +1,156 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
+html {
+  box-sizing: border-box;
+  font-weight: 300;
+  line-height: 1.3;
 }
-  
-#answer {
-    font-size: 24px;
-    font-weight: bold;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  align-items: center;
+  background-image: url("https://cdn.hipwallpaper.com/i/81/57/RV4Qc1.png");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: left;
+}
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+.title {
+  color: white;
+  font-size: 2.5em;
+}
+.title-container {
+  text-align: center;
+  padding-right: 40px;
+  padding-top: 100px;
+  margin-left: -260px;
+}
+.container {
+  max-width: 50em;
+}
+.calculator {
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 45em;
+  overflow: hidden;
+  background-color: #222222;
+  margin-bottom: 20px;
+  box-shadow: 15px 10px rgb(212, 208, 208, 0.25);
+}
+.calc-display {
+  background-color: #222222;
+  color: #fff;
+  padding: 2em 0.5em 0.75em 0;
+  text-align: right;
+  font-size: 2.4em;
+  padding-top: 55px;
+  padding-bottom: 10px; 
+}
+.key-buttons {
+  display: flex;
+  font-size: 1.7em;
+}
+.keys, .operators {
+  flex: 1;
+}
+.keys {
+  margin-bottom: 10px;
+}
+.calc-keys {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+}
+.calc-keys > * {
+  background-color: #fff;
+  padding: 0 1.25em;
+  position: relative;
+  text-align: center;
+  border-radius: 70px;
+  margin: 10px 10px;
+  margin-left: 20px;
+  padding: 10px 30px;
+}
+.calc-keys > *:active::before,
+.calc-keys > .is-depressed::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 70px;
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.operators > * {
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 100px;
+}
+.operators > *:active::before,
+.operators > .is-depressed::before {
+  background-color: rgba(252, 240, 205, 0.925);
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(252, 240, 205, 0.925) inset;
+  content: "";
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.operators {
+  height: 100%;
+  margin-left: 10px;
+  background-color: rgb(248, 176, 20);
+}
+.operator {
+  margin: auto;
+  padding: 30px;
+  display: block;
+  padding-bottom: 40px;
+}
+.decimal {
+  grid-row: 5;
+  grid-column: 3;
+}
+.zero {
+  grid-column: 1 / span 2;
+}
+.clear {
+  border-radius: 70px;
+  grid-column: 1;
+  grid-column: 1 / span 3;
+  background-color: rgb(187, 186, 186);
 }

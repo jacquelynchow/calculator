@@ -3,20 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>JavaScript Fundamentals</title>
+    <title>Jacq-Calculator</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <!-- <h1 id="test"></h1> -->
-    <h1>calculator</h1>
-    <p id="answer"> </p>
-    <input id="number1" placeholder="Number 1"></input>
-    <input id="number2" placeholder="Number 2"></input>
-    <button id="addition">+</button>
-    <button id="subtraction">-</button>
-    <button id="multiplication">x</button>
-    <button id="division">/</button>
-
+    <div class="title-container">
+      <h1 class="title">Jacq-Calculator</h1>
+    </div>
+    <div class="container">
+      <div class="calculator">
+        <div class="calc-display">
+          0
+        </div>
+        <div class="key-buttons">
+          <div class="keys">
+            <div class="calc-keys">
+              <button class="clear" data-action="clear">AC</button>
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button class="zero">0</button>
+              <button class="decimal" data-action="decimal">.</button>
+            </div>
+          </div>
+          <div class="operators">
+            <button class="operator" data-action="addition">+</button>
+            <button class="operator" data-action="subtraction">-</button>
+            <button class="operator" data-action="multiplication">&times;</button>
+            <button class="operator" data-action="division">/</button>
+            <button class="operator" data-action="calculate">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
